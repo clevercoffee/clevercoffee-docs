@@ -1,0 +1,65 @@
+site_name: CleverCoffee 
+site_url: https://clevercoffee.github.io/
+repo_url: https://github.com/rancilio-pid/clevercoffee
+repo_name: CleverCoffee
+theme:
+  name: material
+  logo: assets/site/CleverCoffee.png
+  favicon: assets/site/CleverCoffee.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - conten.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    priamry: teal
+    accent: purple
+  - scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+    priamry: teal
+    accent: lime
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rancilio-pid/clevercoffee
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/Kq5RFznuU4
+
+copyright: |
+  &copy 2024 <a href="https://github.com/rancilio-pid/clevercoffee" target="_blank" rel="noopener">CleverCoffee</a>
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          name: English
+          build: true
+        - locale: de
+          default: true
+          name: Deutsch
+          build: true
