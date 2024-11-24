@@ -1,9 +1,3 @@
-
-
-based on mkdocs-material
-multilanguage support with MkDocs static i18n plugin
-versioning with mike
-
 # CleverCoffee-docs
 (formerly Rancilio PID)
 
