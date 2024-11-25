@@ -14,3 +14,4 @@ This documentation is build with [Material for MkDocs](https://squidfunk.github.
 Multilanguage support is based on [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18).  
 Different versions of this documentation are deployed with [mike](https://github.com/jimporter/mike)
 
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
