@@ -9,7 +9,8 @@
 This repository contains the documentation for the CleverCoffee PID controller project. This manual covers all the necessary steps. This includes installing PlatformIO and uploading the code to the microcontroller. The manual also includes the parts list, information about installing and configuring the PID parameters.  
 You can find our project website here: [Clever Coffee Website](https://clevercoffee.de).
 
-## Build with [Nextra](https://nextra.site/) and [Next.js](https://nextjs.org/)
+This documentation ist build with [Nextra](https://nextra.site/) and [Next.js](https://nextjs.org/).
+Following you will find information on how this is setup.
 
 ## Table of Contents
 
