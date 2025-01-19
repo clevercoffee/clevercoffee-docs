@@ -1,0 +1,184 @@
+import { Steps } from "nextra/components";
+
+# Rancilio Silvia E Vollausbau – Sebi
+
+## Einleitung
+
+Für meinen Voll-Ausbau habe ich mir viel Zeit gelassen und viel dokumentiert, denn ich hatte einiges vor 🙂  
+Neben dem Rauswurf der CPU der Silvia E und dem Vollausbau, wollte ich auch den erweiterten Ausbau mit Waage und digitalem Drucksensor angehen.
+
+Im Folgenden werde ich thematisch nicht viel auf den üblichen „Vollausbau“ eingehen, denn dieser ist im [Handbuch](https://rancilio-pid.github.io/ranciliopid-handbook/) sehr gut beschrieben. Ich werde eher die kleinen Details zur CPU, der Waage und dem Drucksensor zeigen.
+
+---
+
+## Schaltpläne – die Basis aller Überlegungen
+
+Rancilio selbst hat online einen Schaltplan der neuen Silvia E mit CPU.  
+**Achtung, dieser ist definitiv falsch!!**
+
+Aus diesem Grund findet ihr per Download eine PDF mit meinem abgeänderten Schaltplan. Ich erhebe dort keinen Anspruch auf vollständige Richtigkeit, aber mein Umbau funktioniert wie in den Schaltplänen gezeichnet.
+
+[Download Schaltpläne Silvia E](/wp-content/uploads/2021/04/Rancilio-Silvia-E-Schaltplaene.pdf)
+
+![Schaltplan Silvia E Schalter](/wp-content/uploads/2021/04/Schaltplan-Silvia-E-Schalter.png)
+
+---
+
+## Ergänzende Bestellliste – die Grundzutaten für den Ausbau
+
+Ich ergänze hier die [Bestellliste](https://rancilio-pid.github.io/ranciliopid-handbook/de/bestellliste.html) aus dem Handbuch um die notwendigen Teile für den erweiterten Vollausbau.
+
+### Umbau auf Schalter
+
+- [Original Schalter Silvia V4](https://komtra.de/rancilio-ersatzteile/rancilio-ersatzteile/schalter-ein-aus-rancilio-miss-silvia-espressomaschinen.html)
+- Hitzebeständige Kabel mit Flachsteckern (3× 30 cm, 5 Flachstecker)
+
+**Hinweis**: Die Flachstecker vom aktuellen Schalter abziehen und dann von hinten aus dem Gehäuse drücken. Den Silvia-V4-Schalter einsetzen und fertig! Die Heizlampe (orange) funktioniert weiterhin, die Status-LED (grün) nicht mehr (könnte man aber per 3,3 V und Vorwiderstand an den Node anschließen).
+
+### Waage
+
+- [Wägezellen 1 kg (2 Stk.) plus HX711](https://amzn.to/3mpcHo3)
+- 3D-gedruckte Adapter (siehe Chat-Projekt „Waage“)
+- 30 cm geschirmtes Kabel
+
+Für die Waage gibt es mehrere Adapter, alle basieren auf der Idee des Reddit-Users [PostModernDesign](https://www.reddit.com/r/espresso/comments/j5tbaq/weight_based_shot_control_on_a_rancilio_silvia_im/) und wurden von der Clevercoffee Community auf die verlinkten Wägezellen adaptiert. Schaut im Chat im Kanal „Projekt Waage“ vorbei, dort findet ihr sicher das für euch passende Teil.
+
+### Drucksensor
+
+- [Drucksensor bis 200 psi](https://amzn.to/3rUglY8) (oder 300 psi)
+- [90°-Einschraubwinkel G 1/8" (IG) – R 1/8" (AG)](https://www.landefeld.de/artikel/de/90-einschraubwinkel-g-18-ig-r-18-ag-messing/WE%2018%20MS)
+- [LE-Einschraubstück G 1/8"](https://www.landefeld.de/artikel/de/le-einschraubstueck-g-18-ig-r-18-ag-messing/LE%2018%20MS)
+- [Reduziernippel R 1/8" AG – NPT 1/8" IG](https://www.landefeld.de/artikel/de/reduziernippel-r-18-ag-npt-18-ig-messing/RN%2018R18NPT%20MS?param_1=%5B%5D)
+- [Teflonband](https://www.landefeld.de/gruppe/de/ptfe-dichtband-standardqualitaet/DB121/suche/Teflon)
+- [Legris-Anschluss](https://komtra.de/jura-ersatzteile/jura-ersatzteile/legris-anschluss-1-8-4mm-schlauch.html)
+- [O-Ring für Druckschlauch](https://komtra.de/jura-ersatzteile/jura-ersatzteile/premium-dichtung-o-ring-druckschlauch.html)
+- [O-Ring für Pumpe](https://komtra.de/aeg-ersatzteile/aeg-ersatzteile/dichtung-o-ring-pumpe.html)
+- [Silikonschlauch](https://komtra.de/delonghi-ersatzteile/delonghi-ersatzteile/silikonschlauch-di7-de10-l120-delonghi-esam.html)
+- [Klammer / Splint für Schlauchverbindungen](https://komtra.de/jura-ersatzteile/jura-ersatzteile/klammer-splint-schlauchverbindungen.html)
+- [Membranregler](https://komtra.de/jura-ersatzteile/jura-ersatzteile/membranregler-v1-pumpe-jura-impressa.html)
+- [Schlauch FEP Klemmverbindung](https://komtra.de/jura-ersatzteile/jura-ersatzteile/schlauch-fep-l350-mm-klemmverbindung-klemmverbindung.html)
+- [Silikonfett](https://komtra.de/reinigung-pflege/pflege/multi-silikonfett-6g-tube.html)
+
+Der Drucksensor zieht Änderungen am Hydrauliksystem nach sich. Achtet auf saubere Arbeit mit Teflonband und Fittingen.  
+Euer Vorteil: Die Maschine wird sehr viel leiser und die Pumpe klingt „wertiger“!
+
+---
+
+## Ausbau CPU
+
+Sehr einfach: Stecker einzeln abziehen und beschriften, Schraube an der Unterseite lösen, CPU rausnehmen. Den gewonnenen Platz kann man z.B. für das Netzteil verwenden.
+
+Bildergalerie (CPU-Ausbau):  
+_(Diese waren in einem „Image Carousel“ – einfach ein Beispiel-Bild verlinkt)_
+
+![CPU-Ausbau 1](/wp-content/uploads/2021/04/IMG_20210302_221509.jpg)  
+![CPU-Ausbau 2](/wp-content/uploads/2021/04/IMG_20210302_221740.jpg)
+
+---
+
+## Einbau SSR
+
+Das SSR habe ich mit Wärmeleitpaste versehen und mit Montagekleber aufs Stahlgehäuse geklebt (bitte isolieren!).  
+Wer mag, kann sich ein SSR mit Kunststoff-Abdeckung besorgen.
+
+---
+
+## Einbau Drucksensor und Membrandruckregler
+
+<Steps>
+### Demontage
+
+1. Schlauch mit Metallgeflecht entfernen.
+2. Oben am Boiler langsam lösen, damit sich das stehende Wasser über die Dampflanze entleert.
+3. Anschließend unten den Schlauch abdrehen und 90°-Winkel lösen.
+
+### Fitting-Montage
+
+- T-Stück an den Boiler, 90°-Winkel einschrauben, Sensor ins Adapterstück (Teflonband nicht vergessen).
+- Platz checken.
+
+### Membrandruckregler
+
+- Pumpe gegenhalten, Membrandruckregler handfest einschrauben.
+- Teflon-Schlauch mit O-Ring und Silikonfett in den Regler schieben.
+- Ausrichtung so wählen, dass der Schlauch geradlinig zum Legris-Adapter läuft.
+
+</Steps>
+
+---
+
+## Einbau der Waage
+
+Wenn ihr euch für einen Adapter entschieden habt, ist die Waage schnell eingebaut. Die einfachste Lösung: beide Wägezellen parallel an einen HX711 löten, was meist ausreichend genau ist.  
+Zellen in die Adapter schrauben, Tropfblechhalter drauf – fertig.
+
+---
+
+## Verkabelung
+
+Ich habe die Verkabelung nach folgenden Schaltplänen aufgebaut:
+
+- [Schaltplan Silvia E Vollausbau](/wp-content/uploads/2021/04/Schaltplan-Silvia-E-Vollausbau.png)
+- [Schaltplan Silvia E Vollausbau 5V](/wp-content/uploads/2021/04/Schaltplan-Silvia-E-Vollausbau-5V.png)
+
+Strikte Trennung von 5 V und 230 V, Arduino an einem L-Winkel befestigt, Netzteil links stehend geklebt.
+
+> [!CAUTION]
+>
+> ACHTUNG: Wenn ihr den Brew-Switch als Hardware-Erkennung aufbaut, müsst ihr die Glimmlampe aus dem Schalter entfernen, damit 5 V und 230 V getrennt bleiben.
+
+---
+
+## Dämmung
+
+Ich habe die meisten freien Blechflächen mit Alubutyl ausgekleidet, um die „Karosserie“-Geräusche zu dämpfen (insgesamt ~1 kg zusätzlich).  
+Zusammen mit dem Membrandruckregler ergibt das eine angenehm leise Silvia.
+
+---
+
+## Display und Optik
+
+Das Display habe ich mit vier M4-Schrauben an das Blech hinter der Abtropfwanne befestigt. Den Ausschnitt mit Dremel und Feile halbwegs gerade herausgearbeitet.  
+Anschließend alles mit mattschwarzer Folie (3M 1080) foliert. Logos entfernen, Folie mit Fön aufbringen, Logos wieder anbringen.
+
+---
+
+## Software
+
+Zu Beginn meines Umbaus existierten zwar Spezialvarianten für Waage oder Drucksensor, aber kein zusammenhängender Code. Dank andreas und miau sind jetzt alle Funktionen im Branch  
+[master-pressure](https://github.com/rancilio-pid/ranciliopid/tree/master_pressure)  
+integriert. Schaut euch auch den Haupt-Branch an – eventuell ist das schon in einer aktuellen Version (z.B. ab 2.9.1) enthalten.
+
+### Anpassungen für die Waage
+
+In den Libraries (HX711) könnt ihr die Abtastrate von „16“ auf „2“ ändern, damit die Waage schneller reagiert.
+
+### Kalibrierung der Waage
+
+In den HX711-Beispielen findet ihr eine `calibration.ino`. Wenn die Waage eingebaut ist, schließt den Node per USB an und verfolgt den Serial-Monitor (57600 Baud). Legt euer Standardgewicht (z.B. Abtropfschale und Tasse) auf, folgt den Anweisungen, dann tragt den Calibration-Value in den Code ein.
+
+### Kalibrierung des Drucksensors
+
+Dieses Kapitel folgt. Bisher komme ich mit den eingetragenen Werten gut zurecht.
+
+### Meine User-Config
+
+Passt eure `userconfig` an eure Hardware an (Pinlayout, Display, Waage, Drucksensor etc.).
+
+---
+
+## Funktion und Danksagung
+
+Der PID-Regler funktioniert sehr gut (0,1 °C genau, reproduzierbar).  
+Durch den Vollausbau mit Waage und Drucksensor ist die Rancilio Silvia vergleichbar mit teureren Maschinen und bietet ein nahezu perfektes Espresso-Erlebnis!
+
+**Danke** an Markus, Andreas, miau und salatundsauce. Ohne euch wäre das nicht möglich gewesen.  
+Weitere Funktionen (z.B. pressure profiling, Touch-Display) sind in Planung. Fragen und Kommentare gerne im Chat.
+
+---
+
+## Disclaimer
+
+> **Disclaimer**  
+> Dieser Baubericht ist nach bestem Wissen und Gewissen geschrieben, schließt aber keine Fehler aus oder erhebt das Recht auf Vollständigkeit.  
+> Bitte denkt beim Nachbau selbst mit und seid euch der Umbauten bewusst!

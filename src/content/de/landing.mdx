@@ -1,0 +1,130 @@
+# Clever Coffee
+
+**DIY PID Controller für deine Espressomaschine**  
+Auf clevercoffee.de findest du alle Informationen, wie du deine Siebträger-Maschine selbst mit einem PID ausstatten kannst und somit mehr Kontrolle und Konstanz erhältst.
+
+[Features](#features) • [Community-Chat](https://chat.rancilio-pid.de/)
+
+---
+
+## Ein universaler PID-Controller für Single-Boiler
+
+Der auf dieser Seite vorgestellte PID-Controller wurde aus der Community heraus für die Rancilio Silvia entwickelt, ist aber für viele weitere Maschinen einsetzbar.
+
+Auf clevercoffee.de findest du alle Informationen, wie du deine Siebträger-Maschine selbst mit einem PID ausstatten kannst und somit mehr Kontrolle und Konstanz erhältst.
+
+[**Features Clevercoffee-PID**](#features)
+
+![PID Beispiel](/wp-content/uploads/2021/01/PID-allgemein-1024x683.jpg "PID in einer Espressomaschine")
+
+---
+
+## Was ist ein PID?
+
+Eine PID-Steuerung ermöglicht es deiner Espressomaschine, die Temperatur des Brühwassers sehr viel exakter und konstanter zu regeln, als das mit werksseitig verbauten Bimetall-Thermostaten möglich ist.
+
+Die gängigen Thermostate haben eine Schwankung (Hysterese) von bis zu 10°C. Das führt dazu, dass eure Maschine innerhalb dieser recht großen Temperaturspanne ständig zwischen Ein- und Ausschaltpunkt pendelt. Bei einem Espresso macht aber bereits 1°C den Unterschied zwischen sauer, verbrannt oder lecker aus. Deshalb surfen viele Nutzer manuell „die Temperatur“ (Temperatursurfen). Das ist umständlich und braucht Aufmerksamkeit.
+
+Ein PID-Regler löst dieses Problem: Er regelt die Brühtemperatur mit einer Schwankung von deutlich unter 1°, unser System kann auf bis zu 0,1° genau regeln. Man muss nicht mehr ständig den richtigen Bezugsmoment treffen – die richtige Temperatur liegt nach dem Aufheizen immer an.
+
+---
+
+## Besonderheiten Clever-Coffee-PID
+
+### OPEN SOURCE
+
+Das Projekt entstand aus der Community für die Community und wird als solches immer Open Source geführt. Es bietet volle Transparenz und die Möglichkeit, eigene Ideen und Anregungen einzubringen.
+
+### UNIVERSAL
+
+Die PID-Steuerung ist zwar für die Rancilio Silvia entwickelt, aber schon auf viele andere Maschinen übertragen worden. Die Software ermöglicht es, mit geringen Änderungen im Schaltplan alle Funktionen anzupassen.
+
+### EINFACHER AUFBAU
+
+Der PID besteht aus einem universellen, erweiterbaren Hardware-Aufbau (Arduino-Board) plus einer selbst entwickelten Software. Das macht den DIY-Umbau vergleichsweise einfach.
+
+---
+
+## Features Clevercoffee-PID
+
+Der auf dieser Seite vorgestellte PID-Controller wurde aus der Community heraus für die Rancilio Silvia entwickelt, ist aber für viele weitere Maschinen einsetzbar. Auf clevercoffee.de findest du alle Informationen, wie du deine Siebträger-Maschine mit einem PID ausstatten kannst.
+
+### Wichtige Funktionen
+
+- **Regelung Brühtemperatur**  
+  Genauigkeit von bis zu ±0,1°C.
+
+- **Steuerung Brühzeit (inkl. Pre-Infusion)**  
+  In der „Vollausbau“-Variante lässt sich auch die Brühzeit inkl. Pre-Infusion automatisieren.
+
+- **App (iOS/Android)**  
+  Bedienung über eine Smartphone-App.
+
+- **Datenmonitoring**  
+  Über Grafana (webbasiert) und MQTT (IoT) möglich.
+
+- **Updates**  
+  Software-Updates sind drahtlos über WLAN möglich.
+
+- **Open Source**  
+  Die PID-Software ist kostenlos und kann personalisiert werden.
+
+- **Aktive Community**  
+  Schneller Support über den Projektchat und Forum.
+
+- **Weiterentwicklung**  
+  Ideen und Anregungen aus der Community werden aufgenommen und integriert.
+
+![CleverCoffee App](/wp-content/uploads/2021/01/App.jpg "Smartphone-App für CleverCoffee PID")
+
+---
+
+## Hardware-Details
+
+### Eigenes Platinendesign
+
+Die selbstentwickelte Platine für den Arduino vereinfacht den Aufbau, erhöht die Flexibilität und spart Platz.
+
+### Reversible Verkabelung
+
+Die serienmäßige Verkabelung der Maschine bleibt erhalten und wird nur erweitert. Somit kann man jederzeit wieder zurückrüsten.
+
+### Geringer Platzbedarf
+
+Passt problemlos in die meisten kleineren Espressomaschinen.
+
+[**Zum Clevercoffee-PID auf GitHub**](https://github.com/rancilio-pid/ranciliopid)
+
+![Arduino-Platine](/wp-content/uploads/2021/01/Board.jpg "CleverCoffee-Platine")
+
+---
+
+## Probier' es doch einfach mal aus...
+
+Wenn du bis hierhin interessiert gelesen hast, solltest du den Umbau unbedingt ausprobieren. Trau dich ruhig, die Community steht dir immer gerne zur Seite! Und keine Angst – alle Umbaumaßnahmen kannst du jederzeit rückgängig machen.
+
+![Ausbaustufen Clevercoffee-PID](/wp-content/uploads/2021/05/Ausbaustufen-Clevercoffeepid-768x671.jpg "Übersicht zu Ausbaustufen")
+
+[**Zur Anleitung**](https://clevercoffee.de/anleitung)
+
+---
+
+## Die Community
+
+Unser Kernentwicklungsteam besteht aus 7 Personen. Dazu kommen zahlreiche Unterstützer für Programmierung, Simulation oder Platinendesign. Bis Januar 2021 wurden rund 420 Maschinen (Online) umgebaut; inzwischen sind über 640 Mitglieder im Chat registriert. Umbauten gibt es z.B. für Rancilio Silvia, Rancilio Silvia E, Gaggia Classic und Pavoni.
+
+Wir freuen uns über jede Unterstützung! Komm gerne im Chat oder Forum vorbei.
+
+[**Zum Community-Chat**](https://chat.rancilio-pid.de/)
+
+---
+
+## DIY PID seit 3 Jahren
+
+**Und dank der aktiven Community bereits viel erreicht…**
+
+- **1000+** aktive Maschinen
+- **1150+** Chat Mitglieder
+- **7** Kernteam Mitglieder
+- **5** Unterstützte Maschinentypen
+- **100%** Open Source

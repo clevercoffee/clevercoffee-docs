@@ -1,0 +1,96 @@
+---
+title: "Rancilio Silvia E – Konstantin"
+---
+
+# Rancilio Silvia E – Konstantin
+
+![Rancilio Silvia E – Konstantin](/wp-content/uploads/2021/03/Silvia-E-11-720x960.jpg "Rancilio Silvia E – Konstantin")
+
+## Update vom 16. Dezember 2018
+
+Ich ergänze diesen Baubericht mit einigen Änderungen, die ich an der Maschine vorgenommen habe. Der Grund dafür ist, dass ich nach einigen Wochen merkte, dass ich einerseits Timer und die Fernsteuerung der Maschine selten genutzt habe, andererseits aber oft genervt war, dass ich mein Handy zur Hand nehmen musste, um die Heizung ein- oder auszuschalten.
+
+Also entschied ich mich, den NodeMCU an den von der CPU der Maschine geschalteten Stromkreis zu klemmen, damit er wie der Rest der Maschine vom Hauptschalter an- und ausgeschaltet wird. Und da ich mittlerweile das „PCB ESPresso Rev1“ hatte, sollte dieses natürlich eingebaut werden. Auch etwas Schalldämmung kam hinzu und ein paar LEDs, um den Bezug besser im Auge zu haben.
+
+**Updates:**
+
+- Neutralleiter anstatt PIN1 an der CPU von PIN10 abgezweigt. Das USB-Netzteil wird jetzt zusammen mit der Maschine an- und ausgeschaltet.
+- Temperatursensor nicht mehr geklebt, sondern verschraubt (wie von Markus empfohlen).
+- Das Motor-Shield durch das PCB ersetzt.
+- LEDs verklebt und per Step-Up 5V auf 12V ([AZ-Delivery](https://www.az-delivery.de/products/mt3608-dc-dc-step-up-modul-1?ls=de)) versorgt.
+- Bitumenmatten zur Schalldämmung verklebt ([Amazon](https://www.amazon.de/ALUBUTYL-D%C3%A4mmmatte-2m%C2%B2-50x400cm-Dr%C3%B6hn/dp/B014QX6UG4)).
+- Frontblech sauber ausgeschnitten (Metallbaufirma), um das OLED-Display einzupassen.
+
+---
+
+## Einleitung
+
+Die Silvia E hat eine Energiesparfunktion, die die Maschine nach 30 Minuten Inaktivität ausschaltet. Gelöst ist dies durch eine Steuereinheit (im Schaltplan „CPU“). Der Ein/Aus-Schalter ist ein Taster, der einen 12V-Stromkreis der CPU schließt. Das ist praktisch für ein Relais am NodeMCU, um die Maschine (z.B. per App oder Timer) zu schalten.
+
+Dieser Umbau baut auf der Arbeit von Markus und Andreas auf. Vielen Dank für ihre Hilfe!
+
+---
+
+## Material
+
+Die [Materialliste von Andreas](http://rancilio-pid.de/?page_id=193) hat mir sehr geholfen. Ich habe folgende Teile gekauft:
+
+- **NodeMCU** – [Amazon Link](https://www.amazon.de/gp/product/B06Y1LZLLY/)
+- **Relais-Modul** – [Amazon Link](https://www.amazon.de/gp/product/B078Q326KT)
+- **Temperatursensor (DS18B20)** – [Amazon Link](https://www.amazon.de/gp/product/B00N1TSSD8/)
+- **Motor-Shield** (zum Tragen des NodeMCU) – [Amazon Link](https://www.amazon.de/gp/product/B07726JX1W)  
+  Eleganter ist das neue [PCB ESPresso](http://rancilio-pid.de/?page_id=417), das Andreas entworfen hat.
+- **Carlo Gavazzi SSR** – [Reichelt Link](https://www.reichelt.de/solid-state-relais-ust-2-32vdc-ulast-24-280v-ra-2425-d06-p22691.html)
+- **TSIC 306 Sensor** (Alternativ zum DS18B20) – [Reichelt Link](https://www.reichelt.de/tsic-digitale-halbleiter-temperatursensoren-tsic-306-to92-p82327.html)
+
+---
+
+## Schaltplan
+
+![Kommentierter Schaltplan Silvia E](/wp-content/uploads/2021/03/Kommentierter-Schaltplan-Silvia-E-1024x694.jpg "Kommentierter Schaltplan der Rancilio Silvia E")
+
+---
+
+## Bilder-Galerie vom Einbau
+
+(Bei Bedarf einfach in Markdown-Form einfügen, z.B. als einzelne Bilder.)
+
+---
+
+## Software
+
+Ich nutze aktuell ein etwas angepasstes Skript, das auf dem Beta-Code von Markus und Andreas basiert. Im Chat gibt es genauere Infos dazu.
+
+---
+
+## Möglichkeiten und Funktionen
+
+- **PID-Funktion**: Die Maschine heizt nach dem Einschalten schnell und zuverlässig auf die Solltemperatur und hält diese.
+- **Abschaltautomatik**: Die E-Version schaltet weiterhin nach 30 Minuten ab.
+- **App-Steuerung** (per Blynk): Ermöglicht Fernsteuerung, Timer, Zeitschaltuhren usw.
+- **Erweiterbar**: Pre-Infusion u.a. sind möglich. Der Ein/Aus-Taster ist parallel zum Relais geschaltet, sodass man manuell oder per App schalten kann.
+
+---
+
+## Stolperfallen
+
+- **Fehlerhafter NodeMCU**: Mein erster NodeMCU war schlecht verlötet, wodurch kein Flashen möglich war.
+- **SSR testen**: Ein SSR schaltet nur unter Last (230V). Man kann nicht einfach den Durchgang mit dem Multimeter messen.
+- **12V der CPU**: Reichen nicht, um den NodeMCU direkt zu versorgen. Besser ein USB-Netzteil oder wie von Andreas empfohlen.
+- **PID-Werte**: Vorsichtig anpassen. Aktuell verwende ich z.B. `18.5`, `0.09`, `5`.
+- **TSIC 306 Sensor**: Sehr schnell und reagiert stark auf Luftzug. Verkleben ist weniger zuverlässig als Verschrauben.
+
+---
+
+## Danksagung
+
+Der PID-Regler funktioniert sehr gut. Herzlichen Dank an Markus und Andreas. Weitere Funktionen und Ideen sind in Planung. Fragen und Kommentare gerne im Chat.
+
+---
+
+## Disclaimer
+
+> **Disclaimer**  
+> Dieser Baubericht ist nach bestem Wissen und Gewissen erstellt,  
+> schließt aber keine Fehler aus und erhebt keinen Anspruch auf Vollständigkeit.  
+> Bitte denkt beim Nachbau selbst mit und seid euch der Umbauten bewusst!
