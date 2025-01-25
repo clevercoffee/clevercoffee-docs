@@ -1,5 +1,3 @@
-"use client";
-
 import Script from "next/script";
 import { addBasePath } from 'next/dist/client/add-base-path';
 export default async function KiCAD({

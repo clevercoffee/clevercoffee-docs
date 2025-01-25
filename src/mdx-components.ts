@@ -6,11 +6,11 @@ import KiCAD from "@/components/kicad";
 
 const docsComponents = getDocsMDXComponents({
   pre: withIcons(Pre, { js: GitHubIcon }),
-  Caution,
-  KiCAD
 });
 
 export const useMDXComponents: typeof getDocsMDXComponents = (components) => ({
   ...docsComponents,
-  ...components
+  ...components,
+  Caution,
+  KiCAD
 });

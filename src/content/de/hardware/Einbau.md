@@ -132,13 +132,13 @@ Wer hintgegen eine reversible Lösung sucht muss sich um eine Displayhalterung (
 
 - Senkschraube am Sieb
 - Reinigung der Wasserschläuche (sofern die Maschine nicht neu ist)
-- [LED-Umbau der Schalter](LED_Umbau.md)
+- [LED-Umbau der Schalter](../LED_Umbau.md)
 
 ## Ausblick
 
 Features die ebenfalls eingebaut werden können:
 
 - digitales Manometer
-- [integrierte Waage](Waage.md)
+- [integrierte Waage](../Waage.md)
 - Silvia E Zeit für automatisches Ausschalten verändern
 - Automatische Funktion zum Wechsel von Dampf auf Brühen
