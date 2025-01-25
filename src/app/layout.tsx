@@ -85,7 +85,7 @@ export default async function RootLayout({
           </a>
           </Footer>}
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/clevercoffee/clevercoffee-docs/tree/main"
+          docsRepositoryBase="https://github.com/clevercoffee/clevercoffee-docs/tree/master"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
           i18n={[
