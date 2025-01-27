@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 @import "nextra-theme-docs/style.css";
 
 @theme {
