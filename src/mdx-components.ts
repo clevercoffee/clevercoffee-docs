@@ -1,14 +1,18 @@
 import { useMDXComponents as getDocsMDXComponents } from "nextra-theme-docs";
 import { Pre, withIcons } from "nextra/components";
 import { GitHubIcon } from "nextra/icons";
-import { Caution } from "./components/caution";
+import { Caution } from "@/components/caution";
+import KiCAD from "@/components/kicad";
+import Carousel from "./components/carousel";
 
 const docsComponents = getDocsMDXComponents({
   pre: withIcons(Pre, { js: GitHubIcon }),
-  Caution
 });
 
 export const useMDXComponents: typeof getDocsMDXComponents = (components) => ({
   ...docsComponents,
-  ...components
+  ...components,
+  Caution,
+  KiCAD,
+  Carousel
 });

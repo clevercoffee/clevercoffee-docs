@@ -77,11 +77,15 @@ export default async function RootLayout({
       <Head faviconGlyph="☕" />
       <body>
         <Layout
-          banner={<Banner storageKey="Clevercoffee 4">CleverCoffee 4</Banner>}
+          banner={<Banner storageKey="beta">🛠 This is the beta version of the 4.0 Documentation. <a href="https://manual.rancilio-pid.de">Official documentation →</a></Banner>}
           navbar={navbar}
-          footer={<Footer />}
+          footer={<Footer>MIT {new Date().getFullYear()} ©{' '} CleverCoffee Authors. Documentation Powered by &nbsp;
+           <a href="https://nextra.site" target="_blank">
+            Nextra
+          </a>
+          </Footer>}
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/cellcortex"
+          docsRepositoryBase="https://github.com/clevercoffee/clevercoffee-docs/tree/master"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
           i18n={[

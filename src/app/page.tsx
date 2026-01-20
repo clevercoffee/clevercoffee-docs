@@ -28,7 +28,7 @@ const RootRedirect = () => {
   return (
     <>
       <Head>
-        <title>CleverCoffee Documentation</title>
+        <title>CleverCoffee Docs</title>
         <meta name="description" content="CleverCoffee Documentation" />
         <title>CleverCoffee</title>
         <meta httpEquiv="Content-Language" content="en" />
