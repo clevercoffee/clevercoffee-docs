@@ -1,0 +1,80 @@
+site_name: CleverCoffee Docs
+site_description: Builder-focused documentation for the CleverCoffee espresso-machine controller
+site_url: https://clevercoffee.github.io/clevercoffee-docs/
+repo_url: https://github.com/clevercoffee/clevercoffee-docs
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - Safety: getting-started/safety.md
+  - Hardware:
+      - Overview: hardware/index.md
+      - Compatibility: hardware/compatibility.md
+  - Installation:
+      - Web Flasher: installation/index.md
+  - Features:
+      - Overview: features/index.md
+      - Pressure measurement: features/pressure-measurement.md
+  - Configuration:
+      - Overview: configuration/index.md
+      - First setup: configuration/first-setup.md
+  - Development:
+      - Overview: development/index.md
+  - FAQ: faq/index.md
+  - Troubleshooting: troubleshooting/index.md
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            Home: Startseite
+            Getting Started: Erste Schritte
+            Overview: Überblick
+            Safety: Sicherheit
+            Hardware: Hardware
+            Compatibility: Kompatibilität
+            Installation: Installation
+            Web Flasher: Web Flasher
+            Features: Funktionen
+            Pressure measurement: Druckmessung
+            Configuration: Konfiguration
+            First setup: Erste Einrichtung
+            Development: Entwicklung
+            FAQ: FAQ
+            Troubleshooting: Fehlerbehebung
